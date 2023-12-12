@@ -1,0 +1,62 @@
+{
+    "gpu": {
+        "use": true,
+        "id": 0
+    },
+    
+    "model": "GAU0",
+    "dataset": "CO",
+    
+    "out_dir": "out/CO/final/",
+
+    "params": {
+        "seed_net": 3401,
+        "seed": 3401,
+        "cv_seed": 3401,
+        "epochs": 300,
+        "batch_size": 64,
+        "init_lr": 0.001,
+        "lr_reduce_factor": 0.9,
+        "lr_schedule_patience": 20,
+        "min_lr": 1e-8,
+        "weight_decay": 1e-5,
+        "print_epoch_interval": 5,
+        "pklname": "co/graph_final.pkl",
+        "max_time": 48
+    },
+
+    "net_params": {
+        "edge_input_dim": 80,
+        "t_input_dim": 40,
+        "embedding_features": 256,
+        "embedding_dim": 256,
+        "in_dim": 256,
+        "hidden_dim": 256,
+        "out_dim": 256,
+        "edge_feat": true,
+        "residual": true,
+        "readout": "mean",
+        "in_feat_dropout": 0.0,
+        "dropout": 0.0,
+        "h_soap" : false,
+        "h_cat": true,
+        "fc_features": 300,
+        "scheduler_onecycle": true,
+        "scheduler_step": false,
+        "scheduler_ReduceLROnPlateau": false,
+        "layer_norm" : false,
+        "batch_norm": true,
+        "n_heads" : 8,
+
+        "L": 4,
+        "K": 4,
+        "expansion_factor": 2,
+        "s": 300,
+        "norm_type" : "layer_norm",
+        "eps": 1e-5,
+        "max_position_embeddings": 92,
+        "hidden_act" : "silu",
+        "softmax" : true,
+        "relu2": false
+    }
+}
